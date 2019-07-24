@@ -5,13 +5,19 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(VULKAN_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(VULKAN_SDK)\Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDOWS;WIN32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)' == 'Debug'">%(PreprocessorDefinitions);_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)' != 'Debug'">%(PreprocessorDefinitions);NDEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR;VK_PROTOTYPES</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories Condition="'$(Platform)' == 'Win32' AND $(Configuration) == 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Source\lib32</AdditionalLibraryDirectories>
-      <AdditionalLibraryDirectories Condition="'$(Platform)' != 'Win32' AND $(Configuration) == 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Source\lib</AdditionalLibraryDirectories>
-      <AdditionalLibraryDirectories Condition="'$(Platform)' == 'Win32' AND $(Configuration) != 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\lib32</AdditionalLibraryDirectories>
-      <AdditionalLibraryDirectories Condition="'$(Platform)' != 'Win32' AND $(Configuration) != 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Platform)' == 'Win32' AND '$(Configuration)' == 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Source\Lib32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Platform)' != 'Win32' AND '$(Configuration)' == 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Source\Lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Platform)' == 'Win32' AND '$(Configuration)' != 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Platform)' != 'Win32' AND '$(Configuration)' != 'Debug'">%(AdditionalLibraryDirectories);$(VULKAN_SDK)\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies);vulkan-1.lib</AdditionalDependencies>
       <!--<DelayLoadDLLs>%(DelayLoadDLLs);vulkan-1.dll</DelayLoadDLLs>-->
     </Link>
   </ItemDefinitionGroup>
