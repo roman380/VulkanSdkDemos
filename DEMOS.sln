@@ -1,12 +1,10 @@
-# Copyright (c) 2015-2019 LunarG, Inc.
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cube", "vkcube.vcxproj", "{B84A5FC9-9C30-4485-A650-4913C5700215}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cubepp", "vkcubepp.vcxproj", "{157661F1-12B5-471E-AE1F-FE80D5466618}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkcubepp", "vkcubepp.vcxproj", "{157661F1-12B5-471E-AE1F-FE80D5466618}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vulkaninfo", "vulkaninfo.vcxproj", "{7D88DD3E-2DC0-4F96-AACB-63A1478627D6}"
 EndProject
@@ -17,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demo_layer", "demo_layer.vc
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "layer_factory", "..\LayerFactory\Project\layer_factory.vcxproj", "{A97F391E-FBA0-402F-8D36-E0B9C0B161D2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BindImageMemory2", "BindImageMemory2\BindImageMemory2.vcxproj", "{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,8 +66,19 @@ Global
 		{A97F391E-FBA0-402F-8D36-E0B9C0B161D2}.Release|Win32.Build.0 = Release|Win32
 		{A97F391E-FBA0-402F-8D36-E0B9C0B161D2}.Release|x64.ActiveCfg = Release|x64
 		{A97F391E-FBA0-402F-8D36-E0B9C0B161D2}.Release|x64.Build.0 = Release|x64
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Debug|Win32.Build.0 = Debug|Win32
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Debug|x64.ActiveCfg = Debug|x64
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Debug|x64.Build.0 = Debug|x64
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Release|Win32.ActiveCfg = Release|Win32
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Release|Win32.Build.0 = Release|Win32
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Release|x64.ActiveCfg = Release|x64
+		{C7CC8877-E3A9-4002-8DEF-D0602FB7AB56}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB585DE7-F042-4695-A8F8-B9955C387A34}
 	EndGlobalSection
 EndGlobal
